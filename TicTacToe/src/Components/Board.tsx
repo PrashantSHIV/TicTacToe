@@ -2,6 +2,8 @@ import { gameContext } from "../GameContext/gameContext";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { countors } from "./Contours";
+// import { countors } from "./Contours";
 const Board = () => {
   const { turn, setTurn } = useContext(gameContext);
   const [pos, setPos] = useState<number[]>([]);
@@ -9,11 +11,19 @@ const Board = () => {
   const [oPos, setOPos] = useState<number[]>([]);
   const [win, setWin] = useState(false);
   const [draw, setDraw] = useState(false);
+  const [UH, setUH] = useState(false);
+  const [UV0, setUV0] = useState(false);
+  const [US0, setUS0] = useState(false);
+  const [UV1, setUV1] = useState(false);
+  const [UV2, setUV2] = useState(false);
+  const [US1, setUS1] = useState(false);
+  const [MH, setMH] = useState(false);
+  const [LH, setLH] = useState(false);
 
   useEffect(() => {
     checkDraw();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [turn, pos, xPos, oPos]);
+  }, [turn, pos, xPos, oPos, UH]);
 
   const WinPositionsObj: { [key: number]: number[][] } = {
     1: [
@@ -69,7 +79,41 @@ const Board = () => {
       WinPositionsObj[id].forEach((item) => {
         if (xPos.includes(item[0]) && xPos.includes(item[1])) {
           if (screen.width > 1000) {
-            setWin(true);
+            const arr = [Number(id), item[0], item[1]].sort((a, b) => a - b);
+
+            if (countors.get(JSON.stringify(arr)) === "UH") {
+              setUH(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "UV0") {
+              setUV0(true);
+              setWin(true);
+            }
+
+            if (countors.get(JSON.stringify(arr)) === "UV1") {
+              setUV1(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "US0") {
+              setUS0(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "UV2") {
+              setUV2(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "US1") {
+              setUS1(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "LH") {
+              setLH(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "MH") {
+              setMH(true);
+              setWin(true);
+            }
             toast.success("X Wins the game !!!", {
               style: {
                 fontSize: "14px",
@@ -80,7 +124,41 @@ const Board = () => {
               },
             });
           } else {
-            setWin(true);
+            const arr = [Number(id), item[0], item[1]].sort((a, b) => a - b);
+
+            if (countors.get(JSON.stringify(arr)) === "UH") {
+              setUH(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "UV0") {
+              setUV0(true);
+              setWin(true);
+            }
+
+            if (countors.get(JSON.stringify(arr)) === "UV1") {
+              setUV1(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "US0") {
+              setUS0(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "UV2") {
+              setUV2(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "US1") {
+              setUS1(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "LH") {
+              setLH(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "MH") {
+              setMH(true);
+              setWin(true);
+            }
             toast.success("X Wins the game !!!", {
               style: {
                 fontSize: "14px",
@@ -97,7 +175,41 @@ const Board = () => {
       WinPositionsObj[id].forEach((item) => {
         if (oPos.includes(item[0]) && oPos.includes(item[1])) {
           if (screen.width > 1000) {
-            setWin(true);
+            const arr = [Number(id), item[0], item[1]].sort((a, b) => a - b);
+
+            if (countors.get(JSON.stringify(arr)) === "UH") {
+              setUH(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "UV0") {
+              setUV0(true);
+              setWin(true);
+            }
+
+            if (countors.get(JSON.stringify(arr)) === "UV1") {
+              setUV1(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "US0") {
+              setUS0(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "UV2") {
+              setUV2(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "US1") {
+              setUS1(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "LH") {
+              setLH(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "MH") {
+              setMH(true);
+              setWin(true);
+            }
             toast.success("O Wins the game !!!", {
               style: {
                 fontSize: "14px",
@@ -108,7 +220,41 @@ const Board = () => {
               },
             });
           } else {
-            setWin(true);
+            const arr = [Number(id), item[0], item[1]].sort((a, b) => a - b);
+
+            if (countors.get(JSON.stringify(arr)) === "UH") {
+              setUH(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "UV0") {
+              setUV0(true);
+              setWin(true);
+            }
+
+            if (countors.get(JSON.stringify(arr)) === "UV1") {
+              setUV1(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "US0") {
+              setUS0(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "UV2") {
+              setUV2(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "US1") {
+              setUS1(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "LH") {
+              setLH(true);
+              setWin(true);
+            }
+            if (countors.get(JSON.stringify(arr)) === "MH") {
+              setMH(true);
+              setWin(true);
+            }
             toast.success("O Wins the game !!!", {
               style: {
                 fontSize: "14px",
@@ -187,8 +333,6 @@ const Board = () => {
         // console.log(pos);
         setOPos([...oPos, Number(id)]); //To Maintain Y-Position
 
-        console.log(oPos);
-
         checkWin(Number(id));
       }
     }
@@ -207,9 +351,105 @@ const Board = () => {
           className="holder w-[92vw] lg:w-[75%]  flex flex-col justify-center items-center border-[#8B8000] rounded-[2vmin] bg-[#FDDA0D] border-[1px] "
         >
           <div
-            className="Board w-[80%] lg:w-[40%]"
+            className="Board w-[80%] lg:w-[40%] position:absolute"
             style={{ marginTop: "6vmin", paddingBottom: "6vmin" }}
           >
+            {UH && screen.width > 1000 ? (
+              <div
+                className="horizontal-line w-[100%] h-[4px] bg-[#000000]  "
+                style={{ position: "relative", top: 70 }}
+              ></div>
+            ) : (
+              ""
+            )}
+
+            {UV0 && screen.width > 1000 ? (
+              <div
+                className="vertical-line w-[92%] h-[4px] bg-[#000000]  "
+                style={{
+                  position: "relative",
+                  top: 210,
+                  rotate: "90deg",
+                  left: -140,
+                }}
+              ></div>
+            ) : (
+              ""
+            )}
+
+            {UV1 && screen.width > 1000 ? (
+              <div
+                className="vertical-line w-[92%] h-[4px] bg-[#000000]  "
+                style={{
+                  position: "relative",
+                  top: 210,
+                  rotate: "90deg",
+                  left: 16.5,
+                }}
+              ></div>
+            ) : (
+              " "
+            )}
+
+            {US0 && screen.width > 1000 ? (
+              <div
+                className="slant-line w-[110%] h-[4px] bg-[#000000]  "
+                style={{
+                  position: "relative",
+                  top: 205,
+                  rotate: "45deg",
+                  left: -37,
+                }}
+              ></div>
+            ) : (
+              " "
+            )}
+
+            {UV2 && screen.width > 1000 ? (
+              <div
+                className="vertical-line w-[92%] h-[4px] bg-[#000000]  "
+                style={{
+                  position: "relative",
+                  top: 210,
+                  rotate: "90deg",
+                  left: 170,
+                }}
+              ></div>
+            ) : (
+              ""
+            )}
+
+            {US1 && screen.width > 1000 ? (
+              <div
+                className="slant-line w-[110%] h-[4px] bg-[#000000]  "
+                style={{
+                  position: "relative",
+                  top: 190,
+                  rotate: "-45deg",
+                  left: 6,
+                }}
+              ></div>
+            ) : (
+              " "
+            )}
+            {MH && screen.width > 1000 ? (
+              <div
+                className="horizontal-line w-[100%] h-[4px] bg-[#000000]  "
+                style={{ position: "relative", top: 210 }}
+              ></div>
+            ) : (
+              ""
+            )}
+
+            {LH && screen.width > 1000 ? (
+              <div
+                className="horizontal-line w-[100%] h-[4px] bg-[#000000]  "
+                style={{ position: "relative", top: 370 }}
+              ></div>
+            ) : (
+              ""
+            )}
+
             <div className="row1 w-[100%] h-[20vmin] flex">
               <div
                 className="col1 w-[33.33%] h-[100%] border-r-[3px] border-b-[3px] lg:border-r-[8px]  lg:border-b-[8px]  flex justify-center items-center"
@@ -218,6 +458,7 @@ const Board = () => {
                   addSymbol("1");
                 }}
               ></div>
+
               <div
                 className="col2 w-[33.33%] h-[100%]  border-r-[3px] border-b-[3px] lg:border-r-[8px]  lg:border-b-[8px]  flex justify-center items-center"
                 id="2"
@@ -286,7 +527,7 @@ const Board = () => {
               {win ? (
                 <>
                   <div
-                    className="ml-[5vmin] lg:ml-[-16vmin]"
+                    className="ml-[8vmin] lg:ml-[-20vmin]"
                     style={{
                       marginTop: "2vmin",
 
@@ -300,7 +541,7 @@ const Board = () => {
                     style={{
                       padding: "1.15vmin",
                       marginTop: "1.35vmin",
-                      marginLeft: "2.45vmin",
+                      marginLeft: "1.45vmin",
                     }}
                     onClick={reset}
                   >
@@ -310,7 +551,7 @@ const Board = () => {
               ) : draw ? (
                 <>
                   <div
-                    className="ml-[5vmin] lg:ml-[-16vmin]"
+                    className="ml-[8vmin] lg:ml-[-20vmin]"
                     style={{
                       marginTop: "2vmin",
 
@@ -323,7 +564,7 @@ const Board = () => {
                     className="bg-[#000000] text-[#fff] ml-[-2px]"
                     style={{
                       padding: "1.15vmin",
-                      marginLeft: "1.65vmin",
+                      marginLeft: "1vmin",
                       marginTop: "2.45vmin",
                     }}
                     onClick={reset}
