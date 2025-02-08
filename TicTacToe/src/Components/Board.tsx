@@ -216,7 +216,7 @@ const Board = () => {
                 </div>
                 <button
                   className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
-                  style={{ padding: "1.15vmin", marginTop: "1vmin" }}
+                  style={{ padding: "1.15vmin", marginTop: "1.75vmin" }}
                   onClick={reset}
                 >
                   Reset Game
@@ -226,7 +226,7 @@ const Board = () => {
               <>
                 <div
                   className=""
-                  style={{ marginTop: "5vmin", marginLeft: "1vmin" }}
+                  style={{ marginTop: "5vmin", marginLeft: "1.75vmin" }}
                 >
                   Game Over!
                 </div>
