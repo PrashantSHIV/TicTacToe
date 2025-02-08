@@ -209,7 +209,7 @@ const Board = () => {
               <>
                 <div>Game Over!</div>
                 <button
-                  className="mt-5 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
+                  className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
                   onClick={reset}
                 >
                   Reset Game
@@ -219,7 +219,7 @@ const Board = () => {
               <>
                 <div>Game Over!</div>
                 <button
-                  className="mt-5 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
+                  className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
                   onClick={reset}
                 >
                   Reset Game
