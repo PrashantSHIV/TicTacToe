@@ -1,7 +1,7 @@
 import { gameContext } from "../GameContext/gameContext";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
-
+import { toast } from "react-toastify";
 const Board = () => {
   const { turn, setTurn } = useContext(gameContext);
   const [pos, setPos] = useState<number[]>([]);
@@ -69,14 +69,14 @@ const Board = () => {
       WinPositionsObj[id].forEach((item) => {
         if (xPos.includes(item[0]) && xPos.includes(item[1])) {
           setWin(true);
-          alert("X wins!");
+          toast.success("X Wins the game !!!");
         }
       });
     } else if (turn % 2 != 0) {
       WinPositionsObj[id].forEach((item) => {
         if (oPos.includes(item[0]) && oPos.includes(item[1])) {
           setWin(true);
-          alert("O wins!");
+          toast.success("O Wins the game !!!");
         }
       });
     }
@@ -85,7 +85,7 @@ const Board = () => {
   const checkDraw = () => {
     if (pos.length === 9 && !win) {
       setDraw(true);
-      alert("It's a draw!");
+      toast.info("It's a draw!");
     }
   };
   const addSymbol = (id: string) => {
@@ -216,7 +216,7 @@ const Board = () => {
                     fontSize: "4.75vmin",
                   }}
                 >
-                  Game Over!!!
+                  Game Over
                 </div>
                 <button
                   className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
@@ -236,7 +236,7 @@ const Board = () => {
                     fontSize: "4.75vmin",
                   }}
                 >
-                  Game Over!!!
+                  Game Over
                 </div>
                 <button
                   className="bg-[#000000] text-[#fff] ml-[-2px]"
