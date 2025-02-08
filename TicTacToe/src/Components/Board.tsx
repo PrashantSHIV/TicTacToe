@@ -1,6 +1,7 @@
 import { gameContext } from "../GameContext/gameContext";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
+
 const Board = () => {
   const { turn, setTurn } = useContext(gameContext);
   const [pos, setPos] = useState<number[]>([]);
@@ -207,9 +208,15 @@ const Board = () => {
           <p>
             {win ? (
               <>
-                <div>Game Over!</div>
+                <div
+                  className=""
+                  style={{ marginTop: "5vmin", marginLeft: "1.45vmin" }}
+                >
+                  Game Over!
+                </div>
                 <button
                   className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
+                  style={{ padding: "1.15vmin", marginTop: "4vmin" }}
                   onClick={reset}
                 >
                   Reset Game
@@ -217,18 +224,32 @@ const Board = () => {
               </>
             ) : draw ? (
               <>
-                <div>Game Over!</div>
+                <div
+                  className=""
+                  style={{ marginTop: "5vmin", marginLeft: "1.45vmin" }}
+                >
+                  Game Over!
+                </div>
                 <button
-                  className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
+                  className="bg-[#000000] text-[#fff] ml-[-2px]"
+                  style={{
+                    padding: "1.15vmin",
+                    marginLeft: "1.45vmin",
+                    marginTop: "2vmin",
+                  }}
                   onClick={reset}
                 >
                   Reset Game
                 </button>
               </>
             ) : turn % 2 === 0 ? (
-              "X's Turn"
+              <div className="" style={{ marginTop: "7vmin" }}>
+                X's Turn
+              </div>
             ) : (
-              "O's Turn"
+              <div className="" style={{ marginTop: "7vmin" }}>
+                O's Turn
+              </div>
             )}
           </p>
         </div>
