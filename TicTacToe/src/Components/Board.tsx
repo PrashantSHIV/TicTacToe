@@ -68,15 +68,57 @@ const Board = () => {
     if (turn % 2 === 0) {
       WinPositionsObj[id].forEach((item) => {
         if (xPos.includes(item[0]) && xPos.includes(item[1])) {
-          setWin(true);
-          toast.success("X Wins the game !!!");
+          if (screen.width > 1000) {
+            setWin(true);
+            toast.success("X Wins the game !!!", {
+              style: {
+                fontSize: "14px",
+                width: "40vmin",
+                padding: "20px",
+                marginTop: "15px",
+                marginRight: "6px",
+              },
+            });
+          } else {
+            setWin(true);
+            toast.success("X Wins the game !!!", {
+              style: {
+                fontSize: "14px",
+                width: "55vmin",
+                padding: "20px",
+                marginTop: "15px",
+                marginRight: "6px",
+              },
+            });
+          }
         }
       });
     } else if (turn % 2 != 0) {
       WinPositionsObj[id].forEach((item) => {
         if (oPos.includes(item[0]) && oPos.includes(item[1])) {
-          setWin(true);
-          toast.success("O Wins the game !!!");
+          if (screen.width > 1000) {
+            setWin(true);
+            toast.success("O Wins the game !!!", {
+              style: {
+                fontSize: "14px",
+                width: "40vmin",
+                padding: "20px",
+                marginTop: "15px",
+                marginRight: "6px",
+              },
+            });
+          } else {
+            setWin(true);
+            toast.success("O Wins the game !!!", {
+              style: {
+                fontSize: "14px",
+                width: "55vmin",
+                padding: "20px",
+                marginTop: "15px",
+                marginRight: "8px",
+              },
+            });
+          }
         }
       });
     }
@@ -85,7 +127,29 @@ const Board = () => {
   const checkDraw = () => {
     if (pos.length === 9 && !win) {
       setDraw(true);
-      toast.info("It's a draw!");
+      if (screen.width > 1000) {
+        setWin(true);
+        toast.info("This is a draw !!!", {
+          style: {
+            fontSize: "14px",
+            width: "40vmin",
+            padding: "20px",
+            marginTop: "15px",
+            marginRight: "6px",
+          },
+        });
+      } else {
+        setWin(true);
+        toast.info("This is a draw !!!", {
+          style: {
+            fontSize: "14px",
+            width: "55vmin",
+            padding: "20px",
+            marginTop: "15px",
+            marginRight: "8px",
+          },
+        });
+      }
     }
   };
   const addSymbol = (id: string) => {
@@ -131,7 +195,10 @@ const Board = () => {
   };
   return (
     <>
-      <div className="Boardbody w-[100vw] h-[100vh] flex flex-col justify-center items-center ">
+      <div
+        className="Boardbody h-[100vh] lg:h-full  flex flex-col justify-center items-center "
+        style={{ paddingBottom: "6vmin" }}
+      >
         <p className="font-bold text-[8vmin] " style={{ marginTop: "2.5vmin" }}>
           Tic-Tac-Toe
         </p>
@@ -141,7 +208,7 @@ const Board = () => {
         >
           <div
             className="Board w-[80%] lg:w-[40%]"
-            style={{ marginTop: "6vmin" }}
+            style={{ marginTop: "6vmin", paddingBottom: "6vmin" }}
           >
             <div className="row1 w-[100%] h-[20vmin] flex">
               <div
@@ -214,14 +281,14 @@ const Board = () => {
             </div>
           </div>
 
-          <div className="TextContainer mt-20">
+          <div className="TextContainer mt-10">
             <p>
               {win ? (
                 <>
                   <div
-                    className="ml-[-5vmin] lg:ml-[-2vmin]"
+                    className="ml-[-5vmin] lg:ml-[-16vmin]"
                     style={{
-                      marginTop: "8vmin",
+                      marginTop: "2vmin",
 
                       fontSize: "4.75vmin",
                     }}
@@ -230,7 +297,11 @@ const Board = () => {
                   </div>
                   <button
                     className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
-                    style={{ padding: "1.15vmin", marginTop: "1.35vmin" }}
+                    style={{
+                      padding: "1.15vmin",
+                      marginTop: "1.35vmin",
+                      marginLeft: "2.45vmin",
+                    }}
                     onClick={reset}
                   >
                     Reset Game
@@ -239,9 +310,9 @@ const Board = () => {
               ) : draw ? (
                 <>
                   <div
-                    className="ml-[-5vmin] lg:ml-[-2vmin]"
+                    className="ml-[-5vmin] lg:ml-[-16vmin]"
                     style={{
-                      marginTop: "8vmin",
+                      marginTop: "2vmin",
 
                       fontSize: "4.75vmin",
                     }}
@@ -252,8 +323,8 @@ const Board = () => {
                     className="bg-[#000000] text-[#fff] ml-[-2px]"
                     style={{
                       padding: "1.15vmin",
-                      marginLeft: "-2vmin",
-                      marginTop: "1.35vmin",
+                      marginLeft: "1.65vmin",
+                      marginTop: "2.45vmin",
                     }}
                     onClick={reset}
                   >
@@ -264,7 +335,7 @@ const Board = () => {
                 <div
                   className=""
                   style={{
-                    marginTop: "7vmin",
+                    marginTop: "2vmin",
                     fontWeight: "medium",
                     fontSize: "3vmin",
                   }}
@@ -275,7 +346,7 @@ const Board = () => {
                 <div
                   className=""
                   style={{
-                    marginTop: "7vmin",
+                    marginTop: "2vmin",
                     fontWeight: "medium",
                     fontSize: "3vmin",
                   }}
