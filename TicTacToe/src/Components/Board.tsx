@@ -135,10 +135,13 @@ const Board = () => {
         <p className="font-bold text-[8vmin]">Tic-Tac-Toe</p>
         <div
           style={{ marginTop: "2.45vmin" }}
-          className="holder w-[96vw] lg:w-[75%] h-[80vmin] flex flex-col justify-center items-center border-[#8B8000] rounded-[2vmin] bg-[#FDDA0D] border-[1px]"
+          className="holder w-[92vw] lg:w-[75%] h-[85vmin] flex flex-col justify-center items-center border-[#8B8000] rounded-[2vmin] bg-[#FDDA0D] border-[1px]"
         >
-          <div className="Board w-[84%] lg:w-[40%]">
-            <div className="row1 w-[100%] h-[15vmin] flex">
+          <div
+            className="Board w-[80%] lg:w-[40%]"
+            style={{ marginTop: "6vmin" }}
+          >
+            <div className="row1 w-[100%] h-[20vmin] flex">
               <div
                 className="col1 w-[33.33%] h-[100%] border-r-[3px] border-b-[3px] lg:border-r-[8px]  lg:border-b-[8px]  flex justify-center items-center"
                 id="1"
@@ -161,7 +164,7 @@ const Board = () => {
                 }}
               ></div>
             </div>
-            <div className="row2 w-[100%] h-[15vmin] flex">
+            <div className="row2 w-[100%] h-[20vmin] flex">
               <div
                 className="col4 w-[33.33%] h-[100%]  border-b-[3px]  border-r-[3px] lg:border-r-[8px] lg:border-b-[8px] flex justify-center items-center"
                 id="4"
@@ -184,7 +187,7 @@ const Board = () => {
                 }}
               ></div>
             </div>
-            <div className="row3 w-[100%] h-[15vmin] flex">
+            <div className="row3 w-[100%] h-[20vmin] flex">
               <div
                 className="col7 w-[33.33%] h-[100%] border-r-[3px] lg:border-r-[8px]  flex justify-center items-center"
                 id="7"
