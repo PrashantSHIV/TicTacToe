@@ -132,29 +132,29 @@ const Board = () => {
   return (
     <>
       <div className="Boardbody w-[100vw] h-[100vh] flex flex-col justify-center items-center">
-        <p className="font-bold text-[6vmin]">Tic-Tac-Toe</p>
+        <p className="font-bold text-[8vmin]">Tic-Tac-Toe</p>
         <div
           style={{ marginTop: "2.45vmin" }}
-          className="holder w-[75%] h-[80vmin] flex flex-col justify-center items-center border-[#8B8000] rounded-[2vmin] bg-[#FDDA0D] border-[1px]"
+          className="holder w-[96vw] lg:w-[75%] h-[80vmin] flex flex-col justify-center items-center border-[#8B8000] rounded-[2vmin] bg-[#FDDA0D] border-[1px]"
         >
-          <div className="Board w-[40%]">
+          <div className="Board w-[84%] lg:w-[40%]">
             <div className="row1 w-[100%] h-[15vmin] flex">
               <div
-                className="col1 w-[33.33%] h-[100%] border-r-[8px]  border-b-[8px]  flex justify-center items-center"
+                className="col1 w-[33.33%] h-[100%] border-r-[3px] border-b-[3px] lg:border-r-[8px]  lg:border-b-[8px]  flex justify-center items-center"
                 id="1"
                 onClick={() => {
                   addSymbol("1");
                 }}
               ></div>
               <div
-                className="col2 w-[33.33%] h-[100%] border-r-[8px] border-b-[8px]  flex justify-center items-center"
+                className="col2 w-[33.33%] h-[100%]  border-r-[3px] border-b-[3px] lg:border-r-[8px]  lg:border-b-[8px]  flex justify-center items-center"
                 id="2"
                 onClick={() => {
                   addSymbol("2");
                 }}
               ></div>
               <div
-                className="col3 w-[33.34%] h-[100%] border-b-[8px] flex justify-center items-center"
+                className="col3 w-[33.34%] h-[100%]  border-b-[3px]  lg:border-b-[8px] flex justify-center items-center"
                 id="3"
                 onClick={() => {
                   addSymbol("3");
@@ -163,21 +163,21 @@ const Board = () => {
             </div>
             <div className="row2 w-[100%] h-[15vmin] flex">
               <div
-                className="col4 w-[33.33%] h-[100%] border-r-[8px] border-b-[8px] flex justify-center items-center"
+                className="col4 w-[33.33%] h-[100%]  border-b-[3px]  border-r-[3px] lg:border-r-[8px] lg:border-b-[8px] flex justify-center items-center"
                 id="4"
                 onClick={() => {
                   addSymbol("4");
                 }}
               ></div>
               <div
-                className="col5 w-[33.33%] h-[100%] border-r-[8px] border-b-[8px] flex justify-center items-center"
+                className="col5 w-[33.33%] h-[100%] border-b-[3px]  border-r-[3px] lg:border-r-[8px] lg:border-b-[8px] flex justify-center items-center"
                 id="5"
                 onClick={() => {
                   addSymbol("5");
                 }}
               ></div>
               <div
-                className="col6 w-[33.34%] h-[100%]  border-b-[8px] flex justify-center items-center"
+                className="col6 w-[33.34%] h-[100%] border-b-[3px]  lg:border-b-[8px]  flex justify-center items-center"
                 id="6"
                 onClick={() => {
                   addSymbol("6");
@@ -186,14 +186,14 @@ const Board = () => {
             </div>
             <div className="row3 w-[100%] h-[15vmin] flex">
               <div
-                className="col7 w-[33.33%] h-[100%] border-r-[8px]  flex justify-center items-center"
+                className="col7 w-[33.33%] h-[100%] border-r-[3px] lg:border-r-[8px]  flex justify-center items-center"
                 id="7"
                 onClick={() => {
                   addSymbol("7");
                 }}
               ></div>
               <div
-                className="col8 w-[33.33%] h-[100%] border-r-[8px] flex justify-center items-center"
+                className="col8 w-[33.33%] h-[100%] border-r-[3px] lg:border-r-[8px]   flex justify-center items-center"
                 id="8"
                 onClick={() => {
                   addSymbol("8");
