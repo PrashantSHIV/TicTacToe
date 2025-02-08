@@ -526,16 +526,6 @@ const Board = () => {
             <p>
               {win ? (
                 <>
-                  <div
-                    className="ml-[8vmin] lg:ml-[-20vmin]"
-                    style={{
-                      marginTop: "2vmin",
-
-                      fontSize: "4.75vmin",
-                    }}
-                  >
-                    Game Over
-                  </div>
                   <button
                     className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
                     style={{
@@ -550,16 +540,6 @@ const Board = () => {
                 </>
               ) : draw ? (
                 <>
-                  <div
-                    className="ml-[8vmin] lg:ml-[-20vmin]"
-                    style={{
-                      marginTop: "2vmin",
-
-                      fontSize: "4.75vmin",
-                    }}
-                  >
-                    Game Over
-                  </div>
                   <button
                     className="bg-[#000000] text-[#fff] ml-[-2px]"
                     style={{
