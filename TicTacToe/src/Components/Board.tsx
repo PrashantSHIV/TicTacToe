@@ -132,134 +132,154 @@ const Board = () => {
   return (
     <>
       <div className="Boardbody w-[100vw] h-[100vh] flex flex-col justify-center items-center">
-        <div className="Board w-[40%]">
-          <div className="row1 w-[100%] h-[15vmin] flex">
-            <div
-              className="col1 w-[33.33%] h-[100%] border-r-[1px] border-b-[1px]  flex justify-center items-center"
-              id="1"
-              onClick={() => {
-                addSymbol("1");
-              }}
-            ></div>
-            <div
-              className="col2 w-[33.33%] h-[100%] border-r-[1px] border-b-[1px]  flex justify-center items-center"
-              id="2"
-              onClick={() => {
-                addSymbol("2");
-              }}
-            ></div>
-            <div
-              className="col3 w-[33.34%] h-[100%] border-b-[1px] flex justify-center items-center"
-              id="3"
-              onClick={() => {
-                addSymbol("3");
-              }}
-            ></div>
+        <p className="font-bold text-[6vmin]">Tic-Tac-Toe</p>
+        <div
+          style={{ marginTop: "2.45vmin" }}
+          className="holder w-[75%] h-[80vmin] flex flex-col justify-center items-center border-[#8B8000] rounded-[2vmin] bg-[#FDDA0D] border-[1px]"
+        >
+          <div className="Board w-[40%]">
+            <div className="row1 w-[100%] h-[15vmin] flex">
+              <div
+                className="col1 w-[33.33%] h-[100%] border-r-[8px]  border-b-[8px]  flex justify-center items-center"
+                id="1"
+                onClick={() => {
+                  addSymbol("1");
+                }}
+              ></div>
+              <div
+                className="col2 w-[33.33%] h-[100%] border-r-[8px] border-b-[8px]  flex justify-center items-center"
+                id="2"
+                onClick={() => {
+                  addSymbol("2");
+                }}
+              ></div>
+              <div
+                className="col3 w-[33.34%] h-[100%] border-b-[8px] flex justify-center items-center"
+                id="3"
+                onClick={() => {
+                  addSymbol("3");
+                }}
+              ></div>
+            </div>
+            <div className="row2 w-[100%] h-[15vmin] flex">
+              <div
+                className="col4 w-[33.33%] h-[100%] border-r-[8px] border-b-[8px] flex justify-center items-center"
+                id="4"
+                onClick={() => {
+                  addSymbol("4");
+                }}
+              ></div>
+              <div
+                className="col5 w-[33.33%] h-[100%] border-r-[8px] border-b-[8px] flex justify-center items-center"
+                id="5"
+                onClick={() => {
+                  addSymbol("5");
+                }}
+              ></div>
+              <div
+                className="col6 w-[33.34%] h-[100%]  border-b-[8px] flex justify-center items-center"
+                id="6"
+                onClick={() => {
+                  addSymbol("6");
+                }}
+              ></div>
+            </div>
+            <div className="row3 w-[100%] h-[15vmin] flex">
+              <div
+                className="col7 w-[33.33%] h-[100%] border-r-[8px]  flex justify-center items-center"
+                id="7"
+                onClick={() => {
+                  addSymbol("7");
+                }}
+              ></div>
+              <div
+                className="col8 w-[33.33%] h-[100%] border-r-[8px] flex justify-center items-center"
+                id="8"
+                onClick={() => {
+                  addSymbol("8");
+                }}
+              ></div>
+              <div
+                className="col9 w-[33.34%] h-[100%] flex justify-center items-center"
+                id="9"
+                onClick={() => {
+                  addSymbol("9");
+                }}
+              ></div>
+            </div>
           </div>
-          <div className="row2 w-[100%] h-[15vmin] flex">
-            <div
-              className="col4 w-[33.33%] h-[100%] border-r-[1px] border-b-[1px] flex justify-center items-center"
-              id="4"
-              onClick={() => {
-                addSymbol("4");
-              }}
-            ></div>
-            <div
-              className="col5 w-[33.33%] h-[100%] border-r-[1px] border-b-[1px] flex justify-center items-center"
-              id="5"
-              onClick={() => {
-                addSymbol("5");
-              }}
-            ></div>
-            <div
-              className="col6 w-[33.34%] h-[100%]  border-b-[1px] flex justify-center items-center"
-              id="6"
-              onClick={() => {
-                addSymbol("6");
-              }}
-            ></div>
-          </div>
-          <div className="row3 w-[100%] h-[15vmin] flex">
-            <div
-              className="col7 w-[33.33%] h-[100%] border-r-[1px]  flex justify-center items-center"
-              id="7"
-              onClick={() => {
-                addSymbol("7");
-              }}
-            ></div>
-            <div
-              className="col8 w-[33.33%] h-[100%] border-r-[1px] flex justify-center items-center"
-              id="8"
-              onClick={() => {
-                addSymbol("8");
-              }}
-            ></div>
-            <div
-              className="col9 w-[33.34%] h-[100%] flex justify-center items-center"
-              id="9"
-              onClick={() => {
-                addSymbol("9");
-              }}
-            ></div>
-          </div>
-        </div>
 
-        <div className="TextContainer mt-20">
-          <p>
-            {win ? (
-              <>
+          <div className="TextContainer mt-20">
+            <p>
+              {win ? (
+                <>
+                  <div
+                    className=""
+                    style={{
+                      marginTop: "5vmin",
+                      marginLeft: "-5vmin",
+                      fontSize: "4.75vmin",
+                    }}
+                  >
+                    Game Over
+                  </div>
+                  <button
+                    className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
+                    style={{ padding: "1.15vmin", marginTop: "1.35vmin" }}
+                    onClick={reset}
+                  >
+                    Reset Game
+                  </button>
+                </>
+              ) : draw ? (
+                <>
+                  <div
+                    className=""
+                    style={{
+                      marginTop: "5vmin",
+                      marginLeft: "-5vmin",
+                      fontSize: "4.75vmin",
+                    }}
+                  >
+                    Game Over
+                  </div>
+                  <button
+                    className="bg-[#000000] text-[#fff] ml-[-2px]"
+                    style={{
+                      padding: "1.15vmin",
+                      marginLeft: "-2vmin",
+                      marginTop: "1.35vmin",
+                    }}
+                    onClick={reset}
+                  >
+                    Reset Game
+                  </button>
+                </>
+              ) : turn % 2 === 0 ? (
                 <div
                   className=""
                   style={{
-                    marginTop: "5vmin",
-                    marginLeft: "-5vmin",
-                    fontSize: "4.75vmin",
+                    marginTop: "7vmin",
+                    fontWeight: "medium",
+                    fontSize: "3vmin",
                   }}
                 >
-                  Game Over
+                  X's Turn
                 </div>
-                <button
-                  className="mt-6 bg-[#000000] text-[#fff] p-3 ml-[-2px]"
-                  style={{ padding: "1.15vmin", marginTop: "1.35vmin" }}
-                  onClick={reset}
-                >
-                  Reset Game
-                </button>
-              </>
-            ) : draw ? (
-              <>
+              ) : (
                 <div
                   className=""
                   style={{
-                    marginTop: "5vmin",
-                    marginLeft: "-5vmin",
-                    fontSize: "4.75vmin",
+                    marginTop: "7vmin",
+                    fontWeight: "medium",
+                    fontSize: "3vmin",
                   }}
                 >
-                  Game Over
+                  O's Turn
                 </div>
-                <button
-                  className="bg-[#000000] text-[#fff] ml-[-2px]"
-                  style={{
-                    padding: "1.15vmin",
-                    marginLeft: "-2vmin",
-                    marginTop: "1.35vmin",
-                  }}
-                  onClick={reset}
-                >
-                  Reset Game
-                </button>
-              </>
-            ) : turn % 2 === 0 ? (
-              <div className="" style={{ marginTop: "7vmin" }}>
-                X's Turn
-              </div>
-            ) : (
-              <div className="" style={{ marginTop: "7vmin" }}>
-                O's Turn
-              </div>
-            )}
-          </p>
+              )}
+            </p>
+          </div>
         </div>
       </div>
     </>
