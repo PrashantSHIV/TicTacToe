@@ -131,11 +131,13 @@ const Board = () => {
   };
   return (
     <>
-      <div className="Boardbody w-[100vw] h-[100vh] flex flex-col justify-center items-center">
-        <p className="font-bold text-[8vmin]">Tic-Tac-Toe</p>
+      <div className="Boardbody w-[100vw] h-[100vh] flex flex-col justify-center items-center ">
+        <p className="font-bold text-[8vmin] " style={{ marginTop: "2.5vmin" }}>
+          Tic-Tac-Toe
+        </p>
         <div
-          style={{ marginTop: "2.45vmin" }}
-          className="holder w-[92vw] lg:w-[75%] h-[85vmin] flex flex-col justify-center items-center border-[#8B8000] rounded-[2vmin] bg-[#FDDA0D] border-[1px]"
+          style={{ marginTop: "2.45vmin", paddingBottom: "1.45vmin" }}
+          className="holder w-[92vw] lg:w-[75%]  flex flex-col justify-center items-center border-[#8B8000] rounded-[2vmin] bg-[#FDDA0D] border-[1px] "
         >
           <div
             className="Board w-[80%] lg:w-[40%]"
@@ -217,10 +219,10 @@ const Board = () => {
               {win ? (
                 <>
                   <div
-                    className=""
+                    className="ml-[-5vmin] lg:ml-[-2vmin]"
                     style={{
-                      marginTop: "5vmin",
-                      marginLeft: "-5vmin",
+                      marginTop: "8vmin",
+
                       fontSize: "4.75vmin",
                     }}
                   >
@@ -237,10 +239,10 @@ const Board = () => {
               ) : draw ? (
                 <>
                   <div
-                    className=""
+                    className="ml-[-5vmin] lg:ml-[-2vmin]"
                     style={{
-                      marginTop: "5vmin",
-                      marginLeft: "-5vmin",
+                      marginTop: "8vmin",
+
                       fontSize: "4.75vmin",
                     }}
                   >
