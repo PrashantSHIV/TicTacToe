@@ -286,7 +286,7 @@ const Board = () => {
               {win ? (
                 <>
                   <div
-                    className="ml-[-6vmin] lg:ml-[-16vmin]"
+                    className="ml-[-2vmin] lg:ml-[-16vmin]"
                     style={{
                       marginTop: "2vmin",
 
@@ -310,7 +310,7 @@ const Board = () => {
               ) : draw ? (
                 <>
                   <div
-                    className="ml-[-6vmin] lg:ml-[-16vmin]"
+                    className="ml-[-2vmin] lg:ml-[-16vmin]"
                     style={{
                       marginTop: "2vmin",
 
